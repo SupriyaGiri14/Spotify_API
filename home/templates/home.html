@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/css/contact_style.css">  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       
+        <!--================Contact Area =================-->
+    <section class="container" center>
+        <h2 style="text-align:center;margin-top:50px">
+            Spotify 
+        </h2>
+    </section>   
+
+    <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="row" style="border: 1px solid black;padding-top:20px;margin-top:20px">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="label" for="name">Name For new Playlist:</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name" required style="background-color: rgb(237, 226, 200)">
+                        </div>
+                    </div>
+                    <div class="col-md-6"> 
+                        <div class="form-group">
+                            <label class="label" for="email">Description:</label>
+                            <input type="text" class="form-control" name="desc" id="desc" placeholder="Desc" required style="background-color: rgb(237, 226, 200)">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="label" for="#">Song Name:</label>
+                            <textarea name="song" class="form-control" id="song" cols="30" rows="4" placeholder="Song" style="background-color: rgb(237, 226, 200)"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary">
+                            <div class="submitting"></div>
+                        </div>
+                    </div>
+                </div>                       
+            </form>                                    
+        </div>                                     
+    </body>
+</html>
